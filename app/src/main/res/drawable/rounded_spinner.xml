@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <solid android:color="@color/white" />
+    <!-- Rounded corners -->
+    <corners android:radius="16dp" />
+    <!-- Border color and width -->
+    <stroke android:color="@color/blue" android:width="2dp" />
+    <!-- Padding for the spinner content -->
+    <padding
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="8dp" />
+</shape>

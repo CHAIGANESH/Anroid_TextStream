@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6"
+    tools:context=".MainActivity">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-6dp"
+        android:background="@color/my_blue_primary"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <!-- App Name TextView -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TextStream"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Logout Icon -->
+        <ImageView
+            android:id="@+id/logoutIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="Logout Icon"
+            android:src="@drawable/logout_icon"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/topBar"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_search_view"
+        android:backgroundTint="@color/my_blue_primary"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Subjects..." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/cgpaCalculator"
+        android:layout_below="@id/searchView"
+        android:layout_margin="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_recycler_view"
+        android:elevation="2dp" />
+
+    <Button
+        android:id="@+id/cgpaCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/setReminderButton"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        style="@style/CustomButtonStyle"
+        android:text="CGPA Calculator"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/setReminderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        style="@style/CustomButtonStyle"
+        android:text="Set Task Reminder"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+</RelativeLayout>
